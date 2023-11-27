@@ -98,6 +98,36 @@ https://getquicker.net/Sharedaction?code=bf3da905-e641-4bc8-668d-08d841787f87&fr
 
 
 
+# 4.解决图像不显示问题
+
+### 4.1本地.md文件不显示图片
+
+##### 问题原因
+
+显示.md文件的软件不支持图片显示
+
+##### 解决方法
+
+在系统默认应用设置里面将.md文件默认打开软件改为Typora即可
+
+### 4.2github上不显示图片
+
+##### 问题原因
+
+图片存放的位置有问题，文件夹设置有问题
+
+##### 解决方法
+
+assets文件夹（专门存放图片的）与文件放在同一文件夹下（如：notebook）,notebook为github与本地关联的一个文件夹，不要将文件放在notebook外边，也不要修改notebook名称。
+
+<img src="../assets/image-20231127191827896.png" alt="image-20231127191827896" style="zoom:50%;" />
+
+然后，在Typora的文件 --> 偏好设置 --> 图像里面修改插入图片的路径，改到assets文件夹下
+
+<img src="../assets/image-20231127191918531.png" alt="image-20231127191918531" style="zoom:50%;" />
+
+
+
 #### 以上参考文章：
 
 [notebook/Typora使用/Typora+github-云笔记本1.0.md at master · yusenyi123/notebook](https://github.com/yusenyi123/notebook/blob/master/Typora使用/Typora%2Bgithub-云笔记本1.0.md)
