@@ -128,9 +128,9 @@ assets文件夹（专门存放图片的）与文件放在同一文件夹下（�
 
 <img src="../assets/image-20231127191827896.png" alt="image-20231127191827896" style="zoom:50%;" />
 
-然后，在Typora的文件 --> 偏好设置 --> 图像里面修改插入图片的路径，改到assets文件夹下
+然后，在Typora的文件 --> 偏好设置 --> 图像里面修改插入图片的路径，改到assets文件夹下（注意改为相对路径，绝对路径容易不显示图片）
 
-<img src="../assets/image-20231127191918531.png" alt="image-20231127191918531" style="zoom:50%;" />
+<img src="assets/image-20231127203635832.png" alt="image-20231127203635832" style="zoom:50%;" />
 
 
 
