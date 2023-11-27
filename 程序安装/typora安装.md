@@ -2,11 +2,17 @@
 
 #### （1）下载软件
 
+网盘链接：
+
+https://pan.baidu.com/s/1PCAC4aWHtkG-1xDMLH3BKQ?pwd=zw99
+
 运行setup.exe安装（不要安装在有空格的目录中）
 
 #### （2）安装插件
 
-将winmm.dll复制到安装目录
+将winmm.dll复制到安装目录下
+
+注意：后续typora会弹出更新，一定不要更新！！！
 
 ## 2.Typora与github关联
 
