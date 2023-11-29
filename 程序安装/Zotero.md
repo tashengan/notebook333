@@ -2,7 +2,7 @@
 
 （1）将旧文件夹直接复制到新电脑上
 
-![image-20231129114817946](C:\Users\33369\AppData\Roaming\Typora\typora-user-images\image-20231129114817946.png)
+![image-20231129184338509](assets/image-20231129184338509.png)
 
 （2）注意目录路径最好设置的跟旧电脑一样
 
