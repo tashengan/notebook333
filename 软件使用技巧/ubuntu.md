@@ -41,8 +41,6 @@ sudo apt-get install ....
 sudo apt-get uninstall
 ```
 
-
-
 ##### （5）requirement安装
 
 首先进入到项目文件目录下
@@ -51,6 +49,18 @@ sudo apt-get uninstall
 
 ```
 pip3 install -r opt/reqirements.txt
+```
+
+##### （6）解压
+
+```
+tar -xvf cudnn-linux-xxx.tar.xz
+```
+
+##### （7）软件移动到opt文件夹
+
+```
+sudo mv pycharm-community-2020.2.3/ /opt/
 ```
 
 # 2.快捷键
