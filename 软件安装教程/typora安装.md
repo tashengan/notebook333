@@ -56,13 +56,19 @@ https://git-scm.com/downloads
 
 右击：电脑属性-->高级系统设置-->环境变量-->系统变量-->Path-->新建
 
-将  D:\Git\cmd  添加进去
+将  D:\Git\cmd  添加进去（一般安装时会自动添加）
 
 ### 3.2生成ssh公钥
 
 使用ssh公钥不需要每次向github提交都输入密码
 
 #### （1）安装quicker
+
+```
+https://getquicker.net/Download
+```
+
+
 
 #### （2）在quicker中添加两个动作
 
@@ -84,27 +90,29 @@ https://getquicker.net/Sharedaction?code=bf3da905-e641-4bc8-668d-08d841787f87&fr
 
 运行quicker中添加的第一个动作，一直按回车键。然后会得到一串公钥，将其复制。
 
-然后打开自己账号的github首页，点击settings，点击New SSH key，粘贴公钥
+然后打开自己账号的github首页，点击settings，点击SSH and GPG keys点击New SSH key，粘贴公钥
 
-![image-20231125161516794](../assets/image-20231125161516794.png)
+![fa4e46cc946fcbac2315db4fd05f28fc](assets/fa4e46cc946fcbac2315db4fd05f28fc.png)
 
-![image-20231125161602223](../assets/image-20231125161602223.png)
-
-![image-20231125161809868](../assets/image-20231125161809868.png)
+![54e0ea3062fee97423a1ae0e978e55ae_720](assets/54e0ea3062fee97423a1ae0e978e55ae_720.png)
 
 #### （4）在github中新建仓库，获取仓库的ssh链接
 
-点击：New repository创建新仓库，并复制仓库的ssh链接
+主页右上角点击“Your repositoriers”创建新仓库，并复制仓库的ssh链接
 
-![image-20231125161937234](../assets/image-20231125161937234.png)
+![e039fd901aaf077f8be50e44268812d8](assets/e039fd901aaf077f8be50e44268812d8.png)
 
-![image-20231125162114827](../assets/image-20231125162114827.png)
+![5f7b99ffcdd57d811aa861710f9b4c39_720](assets/5f7b99ffcdd57d811aa861710f9b4c39_720.png)
+
+![17aa03de58bcfc364742121d9200e145_720](assets/17aa03de58bcfc364742121d9200e145_720.png)
 
 ### 3.3初始化和远程同步
 
 #### （1）quicker脚本
 
-运行quicker脚本，将复制的仓库ssh链接粘贴，然后enter
+运行quicker的第二个脚本，将复制的仓库ssh链接粘贴，然后enter
+
+![7705d1fa279e1051e7d16baecfda38e3_720](assets/7705d1fa279e1051e7d16baecfda38e3_720.png)
 
 #### （2）远程同步
 
