@@ -36,7 +36,9 @@ https://pan.baidu.com/s/1PCAC4aWHtkG-1xDMLH3BKQ?pwd=zw99
 
 #### （1）软件下载安装
 
-[Git - Downloads (git-scm.com)](https://git-scm.com/downloads)
+```
+https://git-scm.com/downloads
+```
 
 ![image-20231125155744381](../assets/image-20231125155744381.png)
 
