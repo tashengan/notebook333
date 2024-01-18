@@ -118,7 +118,7 @@ https://getquicker.net/Sharedaction?code=bf3da905-e641-4bc8-668d-08d841787f87&fr
 
 以后每次写完笔记之后，就可以运行quicker的第二个动作进行同步github
 
-
+![image-20240115104612643](assets/image-20240115104612643.png)
 
 # 4.解决图像不显示问题
 
