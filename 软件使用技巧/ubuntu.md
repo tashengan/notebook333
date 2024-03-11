@@ -63,6 +63,14 @@ tar -xvf cudnn-linux-xxx.tar.xz
 sudo mv pycharm-community-2020.2.3/ /opt/
 ```
 
+##### （8）执行.sh文件
+
+```
+chmod +x helloworld.sh
+```
+
+
+
 # 2.快捷键
 
 ##### （1）显示隐藏项目
