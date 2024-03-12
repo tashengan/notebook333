@@ -69,6 +69,20 @@ sudo mv pycharm-community-2020.2.3/ /opt/
 chmod +x helloworld.sh
 ```
 
+##### （9）使用清华源pip安装加速
+
+```
+ pip install 库名 -i https://pypi.tuna.tsinghua.edu.cn/simple
+```
+
+##### （10）whl文件
+
+whl格式本质上是一个压缩包，里面包含了py文件，以及经过编译的pyd文件。使得可以在不具备编译环境的情况下，选择合适自己的[python](https://so.csdn.net/so/search?q=python&spm=1001.2101.3001.7020)环境进行安装。
+
+```
+pip install xxxx.whl
+```
+
 
 
 # 2.快捷键
