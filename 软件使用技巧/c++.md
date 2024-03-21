@@ -442,7 +442,7 @@ int main(int a, int b);   //写在调用函数的前面
 ```
 
 ```c++
-//hanshu.h
+// hanshu.h
 #include<iostream>
 using namespace std;
 
@@ -450,7 +450,7 @@ void swap(int a, int b);
 ```
 
 ```c++
-//hanshu.cpp
+//  hanshu.cpp
 #include"hanshu.h"
 void swap(int a, int b)
 {
@@ -463,3 +463,34 @@ void swap(int a, int b)
 ### 7.指针
 
 ##### （1）基本概念
+
+通过指针间接访问内存，保存地址
+
+```c++
+//数据类型*指针名变量
+int a = 10;
+int * p;
+p = &a;    //让指针记录a的地址
+// 指针前加*代表解析引用，找到指针指向的内存中的数据
+*p = 1000;
+```
+
+##### （2）空指针
+
+指针变量指向内存中编号为0的空间
+
+作用：初始化指针变量
+
+```
+int *p = NULL;  //空指针不可进行访问，0~255之间的内存编号是系统占用的，不可进行访问
+```
+
+##### （3）野指针
+
+指针指向非法的内存空间
+
+```
+int *p = (int*)0x1100;
+```
+
+##### （4）const修饰指针
