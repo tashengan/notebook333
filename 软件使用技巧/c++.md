@@ -547,7 +547,7 @@ struct Student
 	string name;
 	int age;
 	int score;
-};
+}s3;
 //2.通过学生类型创建具体学生
 int main()
 {
@@ -558,7 +558,137 @@ int main()
 	s1.score = 100;
 //2.2 struct Student s2 = {...};
 	struct student s2 = {"李四",19,60};
-//2.3在定义结构体时顺便创建结构体
+//2.3在定义结构体时顺便创建结构体，需要先在定义结构体后面加上s3
+    s1.name = “王五”; 
+	s1.age = 18;
+	s1.score = 100;
+}
+```
+
+##### （2）结构体数组
+
+作用：将自定义的结构体放入到数组中方便维护
+
+```c++
+struct 结构体名 数组名[元素个数] = {{}，{}，...,{}}
+
+//1.定义结构体
+struct student
+{
+	string name;
+	int age;
+	int score;
+};
+
+//2.创建结构体数组，给结构体中的元素赋值
+struct student stuArray[8] = 
+{
+	{"张三"，18,100}，
+	{"李四",28,99}，
+	{"王五",18,66}
+}
+
+//3.给结构体中的元素赋值
+stuArray[2].name = "赵六";
+stuArray[2].age = 18;
+stuArray[2].score = 88;
+
+//4.遍历结构体数组
+for(int i = 0;i<3; i++)
+{
+	cout<<<<stuArray[i].name<<stuArray[i].age<<stuArray[i].score<<endl;
+}
+```
+
+##### （3）结构体指针
+
+指针通过“->”访问结构体
+
+```c++
+struct student 
+{
+    string name ;
+    int age;
+    int score;
+};
+
+int main()
+{
+    //1.创建学生结构体变量
+    student s = {"张三",18,100};
+
+    //2.通过指针指向结构体变量
+    struct student *p = &s;
+
+    //3.通过指针访问结构体变量中的数据 
+    cout<<"姓名："<<p->name<<"年龄："<<p->age<<"分数："<<p->score<<endl;
+```
+
+##### （4）结构体嵌套结构体
+
+```c++
+struct student 
+{
+    string name ;
+    int age;
+    int score;
+};
+
+struct teacher
+{
+    int id;
+    string name;
+    int age;
+    struct student stu;
+};
+
+int main()
+{
+    struct teacher t;
+    t.id = 1000;
+    t.name = "老王";
+    t.age = 36;
+    //t.stu = {"小王", 18, 89};
+    t.stu.name = "小王"；
+    t.stu.age = 18;
+    t.stu.score = 89;
+}
+```
+
+##### （5）结构体做函数参数
+
+作用：将结构体作为参数向函数中传递
+
+```
+不想修改主函数中的数据，用值传递，反之用地址传递
+```
+
+##### （6）结构体中const使用场景
+
+```c++
+struct student 
+{
+    string name ;
+    int age;
+    int score;
+};
+
+//将函数中的形参改为指针，可以减少内存空间，而且不会复制出新的副本出来
+void printStudent(const student *s)
+{
+    //s->age = 150;
+    //加入const之后，一旦有修改的操作就会报错，可以防止我们的误操作
+    cout<<s->name<<s->age<<s->score<<endl;
+};
+
+
+int main()
+{
+    struct student s;
+    s.name = "张三";
+    s.age = 18;
+    s.score = 22;
+    printStudent(&s);
 }
 ```
 
