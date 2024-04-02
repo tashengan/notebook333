@@ -385,3 +385,138 @@ func()
 print(num)
 ```
 
+```python
+# 制作银行ATM机用户操作界面
+money = 5000000
+name = None
+# 定义查询函数
+def query():
+    print("---------查询余额---------")
+    print(f"{name}，您的余额为：{money}")
+# 定义存款函数
+def save_money():
+    print("----------存款----------")
+    global money
+    save = int(input("请输入您的存款金额："))
+    money += save
+    print(f"{name}，您的余额为：{money}")
+# 定义取款函数
+def draw_money():
+    print("----------取款----------")
+    global money
+    draw = int(input("请输入您的取款金额："))
+    money -= draw
+    print(f"{name}，您的余额为：{money}")
+# 定义主函数
+def main():
+    global name
+    name = input("请输入您的姓名：")
+    print("----------主菜单----------")
+    print(f"{name}，您好，欢迎来到黑马银行ATM。请选择执行操作：")
+    print("查询余额\t[输入1]")
+    print("存款\t\t[输入2]")
+    print("取款\t\t[输入3]")
+    print("退出\t\t[输入4]")
+    while True:
+        keyboard = int(input("请输入您的选择："))
+        if keyboard == 1:
+            query()
+            continue
+        elif keyboard == 2:
+            save_money()
+            continue
+        elif keyboard == 3:
+            draw_money()
+            continue
+        else:
+            print("程序结束")
+            break
+# 调用主函数
+main()
+```
+
+### 5.数据容器
+
+##### （1）概念
+
+```python
+# 一个容器可以容纳多份数据，每份数据称之为元素
+# 数据容器分为5类：
+# 	列表（list）
+#	元组（tuple）
+#	字符串（str）
+#	集合（set）
+#	字典（dict）
+```
+
+##### （2）列表
+
+```python
+# 基本语法   列表可以存储多种数据类型
+变量名称 = [元素1， 元素2,...,元素n]
+# 定义空列表
+变量名称 = []
+变量名称 = list()
+```
+
+```python
+# 列表的下标索引  从0开始索引
+mylist = ["itheima", 666, True]
+print(mylist[0])  # 输出itheima  顺序
+print(mylist[1])  # 输出666      
+print(mylist[-1])  # 输出Ture    倒序
+print(mylist[-2])  # 输出666
+# 如果列表式嵌套的列表，同样支持下标索引   
+```
+
+```python
+# 列表的常用操作
+# 在python中，如果将函数定义为class(类)的成员，那么函数会称之为：方法
+class student:
+    def add(self, x, y):
+        return x+y
+# 类中函数的调用，方法和函数的功能相同
+student = student()
+num = student.add(1,2)
+
+mylist = ["itheima", 666, True]
+# 查询功能：查询列表的下标
+index = mylist.index(666)
+# 如果查询的元素不存在，就会报错
+
+# 修改指定下标元素
+mylist[0] = 666
+
+# 插入元素
+.insert(下标，元素)
+mylist.insert(1, "best")
+    
+# 追加元素：将指定元素添加到列表的尾部
+.append(元素)  
+mylist.append(6899)
+# 追加一批元素：将其他数据容器的内容取出，依次追加到列表尾部
+.extend(其他数据容器)
+mylist2 = [1, 2, 3]
+mylist.extend(mylist2)
+
+# 元素的删除
+del 列表[下标]
+del mylist[2]
+列表.pop(下标)
+element = mylist.pop(2)  # element接收删除的元素
+# 删除指定元素
+mylist.remove(6899)  # 从左向右只删除第一个6899元素
+# 清空列表
+mylist.clear()
+
+# 统计某元素在列表中的数量
+count = mylist.count(666)
+# 统计列表中的元素数量
+count = len(mylist)
+```
+
+```python
+# 列表的遍历
+
+```
+
