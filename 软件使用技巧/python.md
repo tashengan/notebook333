@@ -139,7 +139,9 @@ name = input("请告诉我你是谁？")
 print("我知道了，你是：%s" % name)  #键盘输入name
 ```
 
-### 2.逻辑结构
+
+
+### 2.逻辑判断结构
 
 ##### （1）布尔类型和比较运算符
 
@@ -173,6 +175,17 @@ else:
     条件都不满足时，执行体n
 ```
 
+##### （4）嵌套语句
+
+```python
+# if else
+if 条件1：
+	条件执行体1
+    if 条件2：
+    	条件执行体2
+        ...
+```
+
 ##### （6）continue和break
 
 ```python
@@ -188,13 +201,120 @@ for i in range(1, 100)：
 
 ```
 
-### 3.函数
+
+
+### 3.循环结构
+
+##### （1）while循环语句
+
+```python
+while 循环条件
+	循环体
+i = 0
+while i < 100
+	print(1)
+    i += 1
+```
+
+```python
+import random
+num = random.randint(1, 100)
+count = 0
+
+flag = True
+while flag:
+    guess_num = int(input("请输入猜想的数字"))
+    count += 1
+    if guess_num == num:
+        print("恭喜您猜中了")
+        flag = False
+    else:
+        if guess_num > num:
+            print("您猜大了，请再猜一次")
+        else:
+            print("您猜小了，请再猜一次")
+
+print(f"您总共猜测了{count}次")
+```
+
+##### （2）while嵌套循环
+
+```python
+while 条件1：
+	条件1满足时，执行体1
+	...
+    while 条件2：
+    条件2满足时，执行体2
+    ...
+```
+
+```python
+print("hello",end='') #实现打印输出的不换行
+print("world",end='') 
+print()  # 实现换行
+# \t  #实现多行字符串进行对齐
+print("hello\tworld")
+print("itheima\tbest")
+
+i = 1
+while i <= 9:
+    j = 1
+    while j <= i:
+        print(f"{j} * {i} = {i*j}\t", end='')
+        j += 1
+    i += 1
+    print()  # 空内容，实现一个换行
+```
+
+##### （3）for循环
+
+```python
+for 临时变量 in 待处理数据集（序列）：
+	循环满足条件时执行的代码
+name = "itheima"
+for x in name:  # 遍历，for只能从被处理的数据集中，依次取出内容进行处理
+    print(x)
+```
+
+##### （4）range语句
+
+```python 
+range(num)  # 生成一个0-num的整数，不包含num
+range(num1, num2)  # 默认步长为1
+range(num1, num2, step)  # 生成一个num1-num2的整数序列
+```
+
+```python
+# for循环中的变量为临时变量，一般在for外部不建议使用
+for x in range(5, 10):  # x可以省略
+	print(x)  # 5、6、7、8、9
+# 如果想在for外也使用for中的变量，应在for前定义这个变量
+```
+
+##### （5）for嵌套循环
+
+```python
+i = 1
+for i in range(1, 101):
+    print(f"第{i}次表白")
+    j = 1
+    for j in range(1, 11):
+        print(f"送第{j}朵花")
+        print("我喜欢你")
+        j += 1
+    i += 1
+print("表白成功")
+```
+
+
+
+### 4.函数
 
 ##### （1）定义
 
-组织好的，可重复使用的，用于实现特定功能的代码块
-
 ```python
+# 组织好的，可重复使用的，用于实现特定功能的代码块
+
 # 函数的定义
 def 函数名（传入参数）:
 	函数体
@@ -202,5 +322,66 @@ def 函数名（传入参数）:
 
 # 函数的调用
 函数名（参数）
+```
+
+##### （2）返回值
+
+```python
+# 在函数中，return后面的语句不再执行
+# 在没有写返回值的时候，函数会有返回值None
+# 返回值的类型为：None Type
+# 应用场景：
+# 1.用在if判断上： None等同于False
+def check_age(age):
+    if age >= 18:
+        return "SUCCESS"
+    else:
+        return None
+result = check_age(16)
+if not result:
+    print("未满18岁，不可进入")
+
+# 2.用于声明无内容的变量上
+# 定义变量时，但暂时不需变量有具体的值，可以用None代替
+name = None
+```
+
+##### （3）函数的说明文档
+
+```python
+# 通过多行注释的方式，对函数进行说明解释
+def func(x, y)  # 当在def下面打出多行注释符就自动写好函数说明的格式
+	"""
+	函数说明
+	：param x：形参x的说明
+	：param y：形参y的说明
+	：return：返回值的说明
+	"""
+    函数体
+    return 返回值
+func(5,6)   # 光标放在（5,6）上就会出现函数说明
+```
+
+##### （4）函数的嵌套调用
+
+```python
+# 一个函数里面调用另外一个函数，会先执行完另一个函数
+```
+
+##### （5）变量的作用域
+
+```python
+# 局部变量：函数体内部的变量，不可被函数外部调用，在函数体内执行完就被销毁
+# 函数体内部对全局变量进行修改，只对函数体内生效
+# 全局变量：
+
+# global关键字：将局部变量设置为全局变量
+num = 100
+def func():
+    global num
+    num = 500
+    print(f"func：{num}")
+func()
+print(num)
 ```
 
