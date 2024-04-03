@@ -517,6 +517,100 @@ count = len(mylist)
 
 ```python
 # 列表的遍历
+# while循环
+index = 0
+while index < len(列表):
+    元素 = 列表[index]
+    对元素进行处理
+    index += 1
 
+# for 循环
+for 临时变量 in 数据容器:
+    对临时变量进行处理
+
+```
+
+##### （3）元组
+
+```python
+# 元组与列表的区别在于，元组不可以修改
+# 定义元组：
+(元素,元素,元素,...,元素)
+t1 = (1,"hello",True)
+t2 = ()
+t3 = tuple()
+# 如果定义单个元素的元组需要加逗号
+t4 = ("hello",)
+# 取出嵌套元组中的元素
+t5 = ((1, 2, 3), (4, 5, 6))
+num = t5[1][2]
+
+# index查找
+index = t1.index(1)
+# count统计
+num = t1.count(True)
+# len统计元组元素数量
+num = len(t1)
+# 元组的遍历(同上列表)
+while
+for
+
+# 元组中嵌套一个list，list中的内容可以修改
+
+```
+
+##### （4）字符串
+
+```python
+# 字符串不可以修改
+# 通过下标索引取值
+my_str = "itheima and itcast"
+value = my_str[2]
+value2 = my_str[-16]
+my_str.index("and")
+
+# 替换:replace
+# 并不会修改原来的字符串，而是会生成一个新的字符串
+new = my_str.replace("it","程序" ) # 将"it"替换为"程序"
+# 切分：split  给出字符，将按字符进行切分
+my_str_split = my_str.split(" ") # 切分后形成列表
+
+# 字符串的规整操作（去除前后空格）：strip
+my_str2 = " itheima and itcast "
+new_mystr = my_str2.strip() # 默认去除字符串首尾空格
+my_str.strip("12") #将字符串中含1和2的去除
+# 统计出现次数：count
+# 统计字符串长度：len
+```
+
+##### （5）序列
+
+```python
+# 序列是指内容连续有序，可使用下标索引的一类数据容器
+# 列表、元组、字符串均可视为序列
+# 切片：从序列中取出一个子序列，得到一个新的序列
+序列[起始下标：结束下标：步长] # 不含结束下标
+# 步长为负，表示从右向左取
+mylist = [0, 1, 2, 3, 4, 5, 6]
+result1 = mylist[1:4] # [1, 2, 3]
+result2 = mylist[:] # [0, 1, 2, 3, 4, 5, 6]
+result3 = mylist[::2] # [0, 2, 4, 6]
+```
+
+##### （6）集合
+
+```python
+# 不支持元素重复，去重，顺序无序，不支持下标索引，允许修改
+变量名称 = {元素， 元素,...,元素}
+变量名称 = set()
+# add()：添加新元素
+# remove()：将指定元素从集合内移除
+# pop()：从集合中随机取一个元素
+# clear()：清空集合
+
+# 取出两个集合的差集
+set1 = {1, 2, 3}
+set2 = {1, 5, 6}
+set3 = set1.difference(set2) # 得到一个新集合，集合1有的而集合2没有
 ```
 
