@@ -612,5 +612,20 @@ result3 = mylist[::2] # [0, 2, 4, 6]
 set1 = {1, 2, 3}
 set2 = {1, 5, 6}
 set3 = set1.difference(set2) # 得到一个新集合，集合1有的而集合2没有
+# 消除两个集合的差集,在set1中删除与set2相同的元素
+set1.difference_update(set2)
+# 合并2个集合
+set5 = set1.union(set2)
+# 统计集合数量
+num = len(set1)
+# 集合的遍历：不能用while，但可以用for
+for element in set1:
+    print(f"集合的元素有{element}") 
+```
+
+##### （7）数据容器
+
+```python
+# 
 ```
 
