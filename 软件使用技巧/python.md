@@ -623,9 +623,103 @@ for element in set1:
     print(f"集合的元素有{element}") 
 ```
 
-##### （7）数据容器
+##### （7）字典
 
 ```python
-# 
+# 通过key和value组合(键值对)
+# key不可以重复，value可以重复
+# 字典中的key和value可以是任意数据类型，但key不可以为字典
+{key:value, key:value,...}
+dect = {"王力宏":99, "周杰伦":80, "林俊杰":77}
+# 定义空字典
+dict1 = {}
+dict2 = dict()
+# 从字典中基于key获取value
+score = dect["周杰伦"]
+print(score)
+```
+
+```python
+# 字典的嵌套
+stu_score_dict = {
+    "王力宏": {"语文": 77, "数学": 66, "英语": 33},
+    "周杰伦": {"语文": 88, "数学": 86, "英语": 55},
+    "林俊杰": {"语文": 99, "数学": 96, "英语": 66}
+}
+# 从嵌套字典中获取信息
+score = stu_score_dict["周杰伦"]["语文"]
+```
+
+```python
+# 新增元素
+dect = {"王力宏":99, "周杰伦":80, "林俊杰":77}
+dect["张信哲"] = 66
+# 更新元素
+dect["周杰伦"] = 33
+# 删除元素
+dect.pop("周杰伦")
+# 清空元素
+dect.clear()
+# 获取全部的key
+keys = dect.keys()
+# 遍历字典
+for key in keys:
+    print(f"字典的key是：{key}")
+    print(f"字典的value是：{dect[key]}")
+for key in dect:
+# 统计字典的元素数量
+num = len(dect)
+```
+
+```python
+# 给级别为1的员工加薪1000元
+print("全体员工当前信息如下：")
+my_dict = {
+    "王力宏": {"部门": "科技部", "工资": 3000, "级别": 1},
+    "周杰伦": {"部门": "市场部", "工资": 5000, "级别": 2},
+    "林俊杰": {"部门": "市场部", "工资": 7000, "级别": 3},
+    "张学友": {"部门": "科技部", "工资": 4000, "级别": 1},
+    "刘德华": {"部门": "市场部", "工资": 6000, "级别": 2}
+}
+print(my_dict)
+
+for name in my_dict:
+    if my_dict[name]["级别"] == 1:
+        employee = my_dict[name]
+        employee["级别"] += 1
+        employee["工资"] += 1000
+        # 将内层嵌套字典更新回外部字典
+        my_dict[name] = employee
+print(my_dict)
+
+print("全体员工级别为1的员工完成升职加薪操作，操作后：")
+my_dict["王力宏"]["工资"] = 4000
+my_dict["王力宏"]["级别"] = 2
+my_dict["张学友"]["工资"] = 5000
+my_dict["张学友"]["级别"] = 2
+print(my_dict)
+```
+
+```python
+# 容器通用操作
+max()
+min()
+# 数据类型转换
+list() # 转列表，将字符串中元素拆分，字典中只保留键
+tuple() # 转元组，将字符串中元素拆分，字典中只保留键
+str() # 转字符串，都会保留
+set() # 转集合
+# 排序
+sorted() # 顺序，排序完，都变为列表对象
+sorted(my_list, reverse = True) # 倒序
+```
+
+```python
+# 字符串的大小比较
+# 通过ASCLL码表，都对应一个ASCll码
+大小写英文单词
+数字
+特殊符号
+# 字符串按位比较，从左边开始比较
 ```
 
