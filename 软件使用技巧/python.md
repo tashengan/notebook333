@@ -723,3 +723,64 @@ sorted(my_list, reverse = True) # 倒序
 # 字符串按位比较，从左边开始比较
 ```
 
+###  6.函数进阶
+
+##### （1）函数的多返回值
+
+```python
+# 两个return只会执行第一个return，跳过下面的内容
+def return_num():
+	return 1
+	return 2
+
+# 一个函数有多个返回值,用一个return
+def test_return():
+    return 1, "hello", True
+x,y,z = test_return()  # 用多个变量接收
+```
+
+##### （2）多种传参方式
+
+```python
+# 1.关键字参数：函数调用通过“键=值”形式传递参数
+def user_info(name, age, gender):
+    print(f"您的名字是：{name}，年龄是{age}，性别是{gender}")
+
+# 可以混合使用，混合使用时，顺序不能乱；键值对顺序可以换
+user_info(name="小明", age=20, gender="男")
+```
+
+```python
+# 2.缺省参数：不传参使用默认值，传参使用传参值
+# 默认值设置统一在最后面设置
+def user_info(name, age, gender='男'):
+    print(f"您的名字是：{name}，年龄是{age}，性别是{gender}")
+# 如下：name设置默认值而age没有设置默认值就会报错  
+def user_info(name="小王", age, gender='男'):
+    print(f"您的名字是：{name}，年龄是{age}，性别是{gender}")
+```
+
+```python
+# 3.不定长参数：也称为可变参数，用于不确定调用的时候会传递多少个参数
+def user_info(*args):  # 传进的所有参数都会被args收集，根据传进参数的位置合并为一个元组
+    print(args)
+
+user_info("TOM", 18)
+```
+
+```python
+# 4.关键字传递：可变参数，传递的参数是键值对，根据传进的参数组成一个字典
+def user_info3(**kwargs):
+    print(kwargs)
+
+user_info3(name = "TOM",  age = 18, id = 110)
+```
+
+##### （3）匿名函数
+
+```python
+# 函数作为参数传递：被传入的数据是确定的，计算逻辑是不确定的
+
+
+```
+
